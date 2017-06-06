@@ -8,7 +8,6 @@
 # Source Tree
 
 ```
-
 ./gt
 ├── CMakeLists.txt
 ├── CMakeLists.txt.in
@@ -49,8 +48,11 @@ Result:
 [----------] Global test environment tear-down
 [==========] 2 tests from 1 test case ran. (0 ms total)
 [  PASSED  ] 2 tests.
+```
 
 make test or ctest
+
+Result:
 ```
     Start 1: gt
 1/1 Test #1: gt ...............................   Passed    0.00 sec
