@@ -1,16 +1,19 @@
 #include <iostream>
 #include "add.h"
+#include "sub.h"
 
 //using namespace std; 
 
 TEST(AddTest, TwoAndTwo)
 {
+    printf("AddTest ------------------->\n");
     ASSERT_EQ(Add(2, 2), 4);
 }
 
-TEST(AddTest, TwoAndOne)
+TEST(SubTest, TwoAndOne)
 {
-    ASSERT_EQ(Add(2, 1), 3);
+    printf("SubTest ------------------->\n");
+    ASSERT_EQ(sub(2, 1), 1);
 }
 
 int main(int argc, char **argv)

@@ -46,8 +46,16 @@ set(GCC_COVERAGE_LINK_FLAGS "-lm")
 SET( CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} ${GCC_COVERAGE_COMPILE_FLAGS}" )
 SET( CMAKE_EXE_LINKER_FLAGS  "${CMAKE_EXE_LINKER_FLAGS} ${GCC_COVERAGE_LINK_FLAGS}" )
 
-add_executable(gt ./gt.cc ./add.cc)
+add_executable(gt ./gt.cc ./add.cc sub.c)
 target_link_libraries(gt gtest)
 
+#find_program(VALGRIND "valgrind")
+#if(VALGRIND)
+#    add_custom_target(valgrind
+#        COMMAND "${VALGRIND}" --tool=memcheck --leak-check=yes --show-reachable=yes --num-callers=20 --track-fds=yes $<TARGET_FILE:bftest>)
+#endif()
+
+# CTest 
+#   ctest -T memcheck
 add_test( gt gt )
 
